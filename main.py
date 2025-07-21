@@ -17,7 +17,13 @@ async def get_items():
 @app.get("/items/{item_id}")
 async def get_item(item_id):
     return {"item_id": item_id}
+@app.get("/users")
+async def get_users():
+    return {"message": "This is users_id"}
+@app.get("/users/me")
+async def get_users_me():
+    return {"message": "This is an users_me_id"}
 #Check tht path parameters for the Users:
 @app.get("/users/{user_id}")
 async def get_item(user_id):
-    return {"item_id": user_id}
+    return {"message": user_id}
