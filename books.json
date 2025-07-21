@@ -1,0 +1,32 @@
+[
+    {
+        "name" : "Harry Portter",
+        "gener" : "fiction",
+        "price" : 15.0,
+        "book_id": "ewyto1bus3uh2kliytuo2"
+    },
+    {
+        "name": "Wednesday",
+        "gener": "fiction",
+        "price": "17.0",
+        "book_id": "ewqits2hgwi2gresti1"
+    },
+    {
+        "name": "Dark Desire",
+        "gener": "fiction",
+        "price": "20.0",
+        "book_id": "qwetsteiste1u2tis7"
+    },
+    {
+        "name": "The Great Gatsby",
+        "gener": "fiction",
+        "price": 25.0,
+        "book_id": "ewyto1bus3uh2kliytuo2"
+    },
+    {
+        "name": "The Great Wal",
+        "gener": "fiction",
+        "price": 23.0,
+        "book_id": "rtarfcs4i8o5c2"
+    }
+]
