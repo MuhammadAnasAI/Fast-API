@@ -1,11 +1,20 @@
 from fastapi import FastAPI
+import seaborn as sns
+import pandas as pd
+from fastapi.responses import HTMLResponse
+import matplotlib.pyplot as plt
+import base64
+from io import BytesIO
+
+
 app = FastAPI()
+df = sns.load_dataset("titanic")
+#Perform a simple data transformation:
+survival_rate = df.groupby("class")['survived'].mean().reset_index()
+#Define the route:
 @app.get("/")
-async def read_root():
-    return {"message": "Hello, I am a Data Scientist working on the Artificial Intelligence."}
-@app.post("/")
-async def post_root():
-    return {"message": "Hello, I am an expert in Artficial Intelligence."}
-@app.put("/{item_id}")
-async def put_item(item_id: int):
-    return{"message": f"item ID is {item_id}"}
+async def root():
+    return {"message": "This is a titanic web app route!"}
+@app.get("/survival_rate")
+async def get_survival_rate():
+    return survival_rate.to_dict(orient="records")
